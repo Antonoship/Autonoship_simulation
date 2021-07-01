@@ -84,6 +84,10 @@ To test the collision avoidance module, run scenario 1:
 To run a certain testing scenario (e.g. scenario8), run:
     
     roslaunch autonoship_simulation autonoship_gazebo.launch scenario:=scenario8
+
+to run the PID autopilot, run: 
+
+    roslaunch autonoship_simulation autonoship_gazebo scenario:=scenario1 autopilot:=PID
     
 To control targetships, publish message in the terminal:
 
