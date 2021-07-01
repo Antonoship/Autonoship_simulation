@@ -1,5 +1,5 @@
-# Autonoship_simulation (Under Construction)
-autonoship simulator based on Gazebo and ROS
+# Autonoship_simulation
+Autonoship simulator based on Gazebo and ROS
 
 
 ### 1. System Requirements
