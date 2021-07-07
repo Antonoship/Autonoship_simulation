@@ -37,9 +37,12 @@ Install FMI Library according to https://github.com/modelon-community/fmi-librar
     mkdir build-fmil; cd build-fmil
     cmake -DFMILIB_INSTALL_PREFIX=~/FMI_library ~/fmi-library
     make install test
-    
 
-### 5. Create Workspace & Environment Configuration
+### 5. Install FMI Adapter
+
+    sudo apt-get install ros-noetic-fmi-adapter
+
+### 6. Create Workspace & Environment Configuration
 
 Download the /autonoship_simulation, /collision_avoidance and /usv_gazebo_plugins into the /home directory. In a terminal, run:
  
@@ -71,9 +74,6 @@ Download the /autonoship_simulation, /collision_avoidance and /usv_gazebo_plugin
     pip install pymunk==4.0.0
     pip install pyyaml
 
-### 6. Install FMI Adapter
-
-    sudo apt-get install ros-noetic-fmi-adapter
 
 ### 7. Usage
 
