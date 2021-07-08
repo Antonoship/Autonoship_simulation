@@ -87,7 +87,7 @@ To run a certain testing scenario (e.g. scenario8), run:
 
 to run the PID autopilot, run: 
 
-    roslaunch autonoship_simulation autonoship_gazebo scenario:=scenario1 autopilot:=PID
+    roslaunch autonoship_simulation autonoship_gazebo.launch scenario:=scenario1 autopilot:=PID
     
 To control targetships, publish message in the terminal:
 
