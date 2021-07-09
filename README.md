@@ -67,6 +67,8 @@ Download the /autonoship_simulation, /collision_avoidance and /usv_gazebo_plugin
     pip install pyyaml
     echo  'export GAZEBO_RESOURCE_PATH=~/autonoship/src/usv_gazebo_plugins/fmu:$GAZEBO_RESOURCE_PATH' >> ~/.bashrc 
     
+    pip install scipy
+    pip install matplotlib
     pip install pygame
     pip install pymunk==4.0.0
     pip install pyyaml
