@@ -37,11 +37,13 @@
         <geometry>
            <box size="0.001 0.001 0.001" />
         </geometry>
+        <!--
         <surface>
           <contact>
             <collide_bitmask>0x02</collide_bitmask>
           </contact>
         </surface>
+        -->
       </collision>
       <inertial>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -68,11 +70,13 @@
              <!-- <box size="311.6 62.622 40" /> -->
              <!-- <mesh filename="package://autonoship_simulation/rudder_ship/Ship_construture_process.dae" scale="${scale} ${scale} ${scale}"/> -->
           </geometry>
+          <!--
           <surface>
             <contact>
               <collide_bitmask>0x02</collide_bitmask>
             </contact>
           </surface>
+          -->
         </collision>
 
         <inertial>
