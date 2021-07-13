@@ -3,26 +3,26 @@
 <robot name="container_ship" xmlns:xacro="http://ros.org/wiki/xacro">
 
 
-    <xacro:arg name="windType" default="global" />
-    <xacro:arg name="waterType" default="global" />
-    <xacro:property name="windType" value="$(arg windType)" />
-    <xacro:property name="waterType" value="$(arg waterType)" />
-    <xacro:property name="dampingXYZ" value="1.88 10 6.66" />
-    <xacro:property name="angularDampingXYZ" value="2 15 2" />
+  <xacro:arg name="windType" default="global" />
+  <xacro:arg name="waterType" default="global" />
+  <xacro:property name="windType" value="$(arg windType)" />
+  <xacro:property name="waterType" value="$(arg waterType)" />
+  <xacro:property name="dampingXYZ" value="1.88 10 6.66" />
+  <xacro:property name="angularDampingXYZ" value="2 15 2" />
 
-    <xacro:property name="PI" value="3.1415926535897931"/>
+  <xacro:property name="PI" value="3.1415926535897931"/>
 
-    <!-- Body properties -->
-    <xacro:property name="front_body_mass" value="0.5"/>
-    <xacro:property name="back_body_mass" value="2"/>
-    <xacro:property name="middle_body_mass" value="200000"/>
-    <xacro:property name="back_water_displaced_mass" value="10"/>
-    <xacro:property name="middle_water_displaced_mass" value="10"/>
-    <xacro:property name="front_water_displaced_mass" value="5"/>
-    <xacro:property name="extraPayload" value="0"/>
-    <xacro:property name="scale" value="1.5"/>
-    <xacro:property name="bl1" value=".1" />
-    <xacro:property name="bl2" value=".1" />
+  <!-- Body properties -->
+  <xacro:property name="front_body_mass" value="0.5"/>
+  <xacro:property name="back_body_mass" value="2"/>
+  <xacro:property name="middle_body_mass" value="200000"/>
+  <xacro:property name="back_water_displaced_mass" value="10"/>
+  <xacro:property name="middle_water_displaced_mass" value="10"/>
+  <xacro:property name="front_water_displaced_mass" value="5"/>
+  <xacro:property name="extraPayload" value="0"/>
+  <xacro:property name="scale" value="1.5"/>
+  <xacro:property name="bl1" value=".1" />
+  <xacro:property name="bl2" value=".1" />
     
 
     <link name="base_footprint">
@@ -37,6 +37,11 @@
         <geometry>
            <box size="0.001 0.001 0.001" />
         </geometry>
+        <surface>
+          <contact>
+            <collide_bitmask>0x02</collide_bitmask>
+          </contact>
+        </surface>
       </collision>
       <inertial>
         <origin rpy="0 0 0" xyz="0 0 0"/>
@@ -63,6 +68,11 @@
              <!-- <box size="311.6 62.622 40" /> -->
              <!-- <mesh filename="package://autonoship_simulation/rudder_ship/Ship_construture_process.dae" scale="${scale} ${scale} ${scale}"/> -->
           </geometry>
+          <surface>
+            <contact>
+              <collide_bitmask>0x02</collide_bitmask>
+            </contact>
+          </surface>
         </collision>
 
         <inertial>
@@ -79,6 +89,7 @@
         <parent link="base_footprint"/>
         <child link="base_link"/>
     </joint>
+
 
 <!--
     <gazebo reference="base_link_joint">
