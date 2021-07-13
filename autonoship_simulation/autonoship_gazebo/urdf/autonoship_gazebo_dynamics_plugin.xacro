@@ -9,10 +9,10 @@
 	<waterLevel>5.0</waterLevel>
 	<waterDensity>997.8</waterDensity>
 	<cmdTimeout>1.0</cmdTimeout>
-	<xDotU>0.01</xDotU>
-	<yDotV>0.01</yDotV>
-	<nDotR>0.01</nDotR>
-	<xU>20000.0</xU>
+	<xDotU>0.0001</xDotU>
+	<yDotV>0.0001</yDotV>
+	<nDotR>0.0001</nDotR>
+	<xU>4925.63407403152</xU>
 	<xUU>0.0</xUU>
 	<yV>99999999.0</yV>
 	<yVV>0.0</yVV>
